@@ -1,9 +1,10 @@
 #GS-DDD
 
 #Integrantes:
-rm553455 - Beatriz Silva Pinheiro Rocha
-rm552746 - Pedro Henrique de Assunção Lima
-rm553507  - Luis Alberto Rocha Filho
+1. rm553455 - Beatriz Silva Pinheiro Rocha
+2. rm552746 - Pedro Henrique de Assunção Lima
+3. rm553507  - Luis Alberto Rocha Filho
+
 
 #O projeto:
 Nossasolucao foi pensada para criar um sistema onde ira emitir alertas de chamados de incendio
