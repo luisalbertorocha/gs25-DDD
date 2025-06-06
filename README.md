@@ -12,21 +12,21 @@ Nossasolucao foi pensada para criar um sistema onde ira emitir alertas de chamad
 # rotas da aplicacao:
 
 ### chamados:
-POST http://localhost:8080/v1/chamados/criar - cria um chamado
+POST http://localhost:8080/v1/chamados/criar - cria um chamado.
 ex de body:
 {
 "local": "mata alta",
 "severidade": 3
 }
 
-GET http://localhost:8080/v1/chamados - lista todos os chamados
+GET http://localhost:8080/v1/chamados - lista todos os chamados.
 
 ### Alerta:
 
-GET http://localhost:8080/v1/aerta - lista todos os alertas
+GET http://localhost:8080/v1/aerta - lista todos os alertas.
 
 ### equipe:
-POST http://localhost:8080/v1/equipe/criar - adciona uma pessoa a um local para atender os chamados
+POST http://localhost:8080/v1/equipe/criar - adciona uma pessoa a um local para atender os chamados.
 ex de body:
 {
 "nome": "Carlos Silva",
@@ -35,7 +35,7 @@ ex de body:
 "disponivel": true
 }
 
-GET http://localhost:8080/v1/equipe - lista todas as equipes
+GET http://localhost:8080/v1/equipe - lista todas as equipes.
 
 
 # Funcionalidaes/Classe de negocio:
