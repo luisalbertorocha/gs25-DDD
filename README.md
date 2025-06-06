@@ -75,10 +75,6 @@ O projeto foi desenvolvido para registrar e responder automaticamente a chamados
 ### Passo a passo
 
 1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio
-   ```
 
 2. Abra o projeto no IntelliJ IDEA.
 
