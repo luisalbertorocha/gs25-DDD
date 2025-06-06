@@ -1,6 +1,6 @@
 #GS-DDD
 
-#Integrantes:
+# Integrantes:
 1. rm553455 - Beatriz Silva Pinheiro Rocha
 2. rm552746 - Pedro Henrique de Assunção Lima
 3. rm553507  - Luis Alberto Rocha Filho
