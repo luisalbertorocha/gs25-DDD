@@ -25,8 +25,8 @@ GET http://localhost:8080/v1/chamados - lista todos os chamados
 
 GET http://localhost:8080/v1/aerta - lista todos os alertas
 
-### chamados:
-POST http://localhost:8080/v1/chamados/criar - adciona uma pessoa a um local para atender os chamados
+### equipe:
+POST http://localhost:8080/v1/equipe/criar - adciona uma pessoa a um local para atender os chamados
 ex de body:
 {
 "nome": "Carlos Silva",
@@ -35,7 +35,7 @@ ex de body:
 "disponivel": true
 }
 
-GET http://localhost:8080/v1/chamados - lista todas as equipes
+GET http://localhost:8080/v1/equipe - lista todas as equipes
 
 
 # Funcionalidaes/Classe de negocio:
