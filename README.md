@@ -1,47 +1,107 @@
-#GS-DDD
+# GS-DDD - Sistema de Monitoramento de Incêndios
 
-# Integrantes:
-1. rm553455 - Beatriz Silva Pinheiro Rocha
-2. rm552746 - Pedro Henrique de Assunção Lima
-3. rm553507  - Luis Alberto Rocha Filho
+## Integrantes
+- rm553455 – Beatriz Silva Pinheiro Rocha  
+- rm552746 – Pedro Henrique de Assunção Lima  
+- rm553507 – Luis Alberto Rocha Filho  
 
+---
 
-# O projeto:
-Nossasolucao foi pensada para criar um sistema onde ira emitir alertas de chamados de incendio
+## Sobre o projeto
 
-# rotas da aplicacao:
+O projeto foi desenvolvido para registrar e responder automaticamente a chamados de incêndio. A ideia é permitir que os chamados sejam criados com local e severidade, que alertas sejam gerados a partir disso e que equipes disponíveis sejam atribuídas automaticamente para o atendimento.
 
-### chamados:
-POST http://localhost:8080/v1/chamados/criar - cria um chamado.
-ex de body:
-{
-"local": "mata alta",
-"severidade": 3
-}
+---
 
-GET http://localhost:8080/v1/chamados - lista todos os chamados.
+## Funcionalidades
 
-### Alerta:
+- Criar e listar chamados
+- Gerar e listar alertas
+- Cadastrar e listar equipes de atendimento
+- Atribuir automaticamente equipes disponíveis aos chamados
+- Atualizar status de chamados e disponibilidade das equipes
 
-GET http://localhost:8080/v1/aerta - lista todos os alertas.
+---
 
-### equipe:
-POST http://localhost:8080/v1/equipe/criar - adciona uma pessoa a um local para atender os chamados.
-ex de body:
-{
-"nome": "Carlos Silva",
-"idade": 32,
-"setor": "Zona Norte",
-"disponivel": true
-}
+## Rotas da API
 
-GET http://localhost:8080/v1/equipe - lista todas as equipes.
+### Chamados
 
+- **Criar chamado**  
+  `POST /v1/chamados/criar`  
+  Exemplo de body:
+  ```json
+  {
+    "local": "Mata Alta",
+    "severidade": 3
+  }
+  ```
 
-# Funcionalidaes/Classe de negocio:
+- **Listar chamados**  
+  `GET /v1/chamados`
 
-1. Criar e listar Chamados
-2. Criar e listar Alertas
-3. Criar e listar Equipes
-4. Monitoramento de Chamados para gerar alertas as pessoas
-5. Monitoramento das equipes para designar as diponiveis aos chamados
+### Alertas
+
+- **Listar alertas**  
+  `GET /v1/alerta`
+
+### Equipes
+
+- **Cadastrar equipe**  
+  `POST /v1/equipe/criar`  
+  Exemplo de body:
+  ```json
+  {
+    "nome": "Carlos Silva",
+    "idade": 32,
+    "setor": "Zona Norte",
+    "disponivel": true
+  }
+  ```
+
+- **Listar equipes**  
+  `GET /v1/equipe`
+
+---
+
+## Como rodar o projeto
+
+### Requisitos
+- Java 17+
+- IntelliJ IDEA (ou outra IDE com suporte a Spring Boot)
+- Maven (se o projeto usar)
+- PostgreSQL (caso esteja usando banco de dados)
+
+### Passo a passo
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   cd seu-repositorio
+   ```
+
+2. Abra o projeto no IntelliJ IDEA.
+
+3. Rode a aplicação:
+   - Vá até a classe principal (com `@SpringBootApplication`)
+   - Clique em “Run” ou use `Shift + F10`
+
+4. Acesse o sistema em:
+   ```
+   http://localhost:8080
+   ```
+
+---
+
+## Dica para entrega do projeto (zip)
+
+Se for enviar ou entregar o projeto:
+
+```
+Projeto.zip
+├── src/
+├── out/               (se quiser incluir o .jar gerado)
+├── pom.xml            (ou build.gradle)
+├── README.md
+└── .gitignore         (se quiser ignorar /target, /.idea etc.)
+```
