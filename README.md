@@ -6,12 +6,12 @@
 3. rm553507  - Luis Alberto Rocha Filho
 
 
-#O projeto:
+# O projeto:
 Nossasolucao foi pensada para criar um sistema onde ira emitir alertas de chamados de incendio
 
-#rotas da aplicacao:
+# rotas da aplicacao:
 
-###chamados:
+### chamados:
 POST http://localhost:8080/v1/chamados/criar - cria um chamado
 ex de body:
 {
@@ -21,11 +21,11 @@ ex de body:
 
 GET http://localhost:8080/v1/chamados - lista todos os chamados
 
-###Alerta:
+### Alerta:
 
 GET http://localhost:8080/v1/aerta - lista todos os alertas
 
-###chamados:
+### chamados:
 POST http://localhost:8080/v1/chamados/criar - adciona uma pessoa a um local para atender os chamados
 ex de body:
 {
@@ -38,7 +38,7 @@ ex de body:
 GET http://localhost:8080/v1/chamados - lista todas as equipes
 
 
-#Funcionalidaes/Classe de negocio:
+# Funcionalidaes/Classe de negocio:
 
 1. Criar e listar Chamados
 2. Criar e listar Alertas
