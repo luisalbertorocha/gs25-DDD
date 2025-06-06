@@ -2,22 +2,29 @@ package br.com.gs.firetracker.controllers;
 
 import br.com.gs.firetracker.entities.Chamado;
 import br.com.gs.firetracker.services.ChamadoService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/chamados")
+@RequestMapping("/v1/chamados")
 public class ChamadoController {
 
     @Autowired
     private ChamadoService chamadoService;
 
     @GetMapping
-    public List<Chamado> getAllChamados() {
+    @ResponseStatus(HttpStatus.OK)
+    public List<Chamado> listarTodosChamados() {
         return chamadoService.listarTodosChamados();
+    }
+
+    @PostMapping("/criar")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Chamado criarChamado(@RequestBody @Valid Chamado chamado) {
+        return chamadoService.criarChamado(chamado);
     }
 }

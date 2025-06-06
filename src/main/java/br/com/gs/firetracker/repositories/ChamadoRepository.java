@@ -8,5 +8,9 @@ import java.util.List;
 public interface ChamadoRepository extends JpaRepository<Chamado, Integer> {
 
     public List<Chamado> findAll();
+
+    public List<Chamado> findByProcessadoFalse();
+
+    public List<Chamado> findByStatus(String status);
 }
 

@@ -5,6 +5,7 @@ import br.com.gs.firetracker.repositories.ChamadoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -15,6 +16,10 @@ public class ChamadoService {
 
     public List<Chamado> listarTodosChamados() {
         return chamadoRepository.findAll();
+    }
+
+    public Chamado criarChamado(Chamado chamado) {
+        return chamadoRepository.save(chamado);
     }
 }
 
